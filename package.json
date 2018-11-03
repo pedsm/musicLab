@@ -2,9 +2,10 @@
   "name": "musiclab",
   "version": "1.0.0",
   "description": "Midi AI",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,9 @@
   },
   "homepage": "https://github.com/pedsm/musicLab#readme",
   "dependencies": {
+    "electron": "^3.0.7",
     "midi-parser-js": "^3.1.4",
-    "midifile": "^2.0.0"
+    "midifile": "^2.0.0",
+    "tone": "^0.12.80"
   }
 }

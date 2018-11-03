@@ -6,4 +6,5 @@ const { log, warn, error } = console
 const file = fs.readFileSync('midis/intro.mid')
 const midi = new MIDIFile(file)
 
-log(midi.tracks[0])
+keys = midi.getTrackEvents(0)
+fs.writeFileSync('output.json', JSON.stringify(keys))
