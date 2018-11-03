@@ -1,0 +1,23 @@
+{
+  "name": "musiclab",
+  "version": "1.0.0",
+  "description": "Midi AI",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedsm/musicLab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedsm/musicLab/issues"
+  },
+  "homepage": "https://github.com/pedsm/musicLab#readme",
+  "dependencies": {
+    "midi-parser-js": "^3.1.4",
+    "midifile": "^2.0.0"
+  }
+}
