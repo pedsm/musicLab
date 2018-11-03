@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
+
 <body>
-   <h1>Music Lab</h1> 
-   <!-- <script>
-       require('./main.js') 
-   </script> -->
-   <script src="./main.js"></script>
+    <div class="container">
+        <!-- <nav class="level" style="padding: 10px">
+            <p class="level-item level-left">
+                Music Lab
+            </p>
+            <p class="level-item level-right">
+                Controls?
+            </p>
+        </nav> -->
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Music Lab
+                    </h1>
+                    <h2 class="subtitle">
+                        Your AI music creation partener
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="patterns">
+                <h1>{{name}}</h1>
+                <div v-for="pattern in patterns">
+                    <!-- <svg width=400 height=400>
+                        <rect v-for="(note,i) in pattern"
+                        :width="note.durS * (400/8)"
+                        :height="(150/11)"
+                        :x="note.timeS * (400/8)"
+                        :y="200 - ((150/11) * note.relNote)"
+                        fill="#00d1b2"
+                        ></rect>
+                    </svg> -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./main.js"></script>
+    <!-- <script>
+        const app = new Vue({
+            el: '#patterns',
+            pattern: []
+        })
+    </script> -->
+</body>
+
+</html>
 </body>
 </html>
