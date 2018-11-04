@@ -5,6 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
     "start": "electron ."
   },
   "repository": {
@@ -18,7 +20,6 @@
   },
   "homepage": "https://github.com/pedsm/musicLab#readme",
   "dependencies": {
-    "electron": "^3.0.7",
     "midi-parser-js": "^3.1.4",
     "midiconvert": "^0.4.7",
     "midifile": "^2.0.0",
@@ -26,6 +27,14 @@
     "tone": "^0.12.80"
   },
   "devDependencies": {
+    "electron": "^3.0.7",
+    "electron-builder": "^20.31.2",
     "electron-packager": "^12.2.0"
+  },
+  "build": {
+    "appId": "com.music-lab",
+    "mac": {
+      "category": "entertainment"
+    }
   }
 }
