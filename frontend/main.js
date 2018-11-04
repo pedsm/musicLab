@@ -80,7 +80,7 @@ function makeSequence() {
     const s = scale('dorian').map(transpose(baseNote))
     let cursor = 0
     const sequence = [baseNote]
-    for (let i = 0; i <= 2; i++) {
+    for (let i = 0; i <= 14; i++) {
         cursor += Math.round(Math.random() * model.length)
         sequence.push(s[cursor % s.length])
     }
@@ -94,7 +94,6 @@ function makeTimedSequence(seq) {
     for (note of seq) {
         const dur = model[Math.round(Math.random() * model.length) % model.length]
         // Stop making loop over 16
-        currentTime += Tone.Time(dur)
         if(currentTime >= Tone.Time('4:0').toSeconds()) {
             continue
         }
@@ -106,6 +105,7 @@ function makeTimedSequence(seq) {
             timeS: currentTime,
             midi: Note.midi(note)
         })
+        currentTime += Tone.Time(dur)
     }
     const minMidi = Math.min.apply(null, part.map(a => a.midi))
     return part
