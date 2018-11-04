@@ -20,6 +20,7 @@
   "dependencies": {
     "electron": "^3.0.7",
     "midi-parser-js": "^3.1.4",
+    "midiconvert": "^0.4.7",
     "midifile": "^2.0.0",
     "tonal": "^2.0.0",
     "tone": "^0.12.80"

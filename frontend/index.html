@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>MusicLab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -45,15 +45,18 @@
         </section>
         <section>
             <div id="patterns">
-                <h1>{{name}}</h1>
                 <div class="toggle" v-for="toggle in toggles">
-                    <p class="title">{{toggle.name}}</p>
+                    <div>
+                        <p class="title">{{toggle.name}}</p>
+                        <a v-if="toggle.shuffle != null" @click="toggle.shuffle" href="#">Shuffle</a>
+                    </div>
                     <input type="checkbox" v-model="toggle.value"/>
                 </div>
             </div>
         </section>
     </div>
     <footer class="footer">
+            <center> <a href="javascript:exportMidi();">Export as midi</a> </center>
             <div class="content has-text-centered">
               <p>
                 <strong>Music Lab</strong> built in under 24h in HackTheMidlands
@@ -61,12 +64,6 @@
             </div>
           </footer>
     <script src="./main.js"></script>
-    <!-- <script>
-        const app = new Vue({
-            el: '#patterns',
-            pattern: []
-        })
-    </script> -->
 </body>
 
 </html>
