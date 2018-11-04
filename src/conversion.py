@@ -1,4 +1,5 @@
 import sys
+from mingus.midi import MidiFileOut
 _flats = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G"]
 _sharps = ["G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G"]
 _preferFlats = True
@@ -37,9 +38,11 @@ def main(args):
         for i in range(0, len(_flats)):
             newChords = transposeChords(args, i)
             a = " ".join(newChords)
-            b += " "+a[2:]
-            print (a)
+            b += " "+a[0]
+            print (a[0])
         print("This is " +b)
+        nc = NoteContainer([b])
+        MidiFileOut.write_NoteContainer("test.mid", nc)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
