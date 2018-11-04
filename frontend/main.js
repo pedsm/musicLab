@@ -33,9 +33,18 @@ const app = new Vue({
 
 // Players
 let i = 0
+let prevDouble = false
 Tone.Transport.scheduleRepeat(time => {
     // console.log(Tone.Time(time).toBarsBeatsSixteenths())
+    if(prevDouble){
+        console.log('previous note was double, skipping')
+        prevDouble = false
+        return
+    }
     const note = patterns[0][++i % patterns[0].length]
+    if(note.dur == '0:2') {
+        prevDouble = true
+    }
     if (toggles[0].value) {
         playNote(note.note, note.dur, time)
     }
