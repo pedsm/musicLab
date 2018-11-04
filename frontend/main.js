@@ -1,5 +1,5 @@
 const Tone = require('tone')
-const { Chord, Note, Scale, scale, transpose } = require('Tonal')
+const { Chord, Note, Scale, scale, transpose } = require('tonal')
 const gotModel = require('./gotModel.json')
 var synth = new Tone.Synth().toMaster()
 var chordSynth =  new Tone.PolySynth(6, Tone.Synth).toMaster();
@@ -164,3 +164,6 @@ function exportMidi() {
         fs.writeFileSync(path, midi.encode(), "binary")
     })
 }
+document.getElementById('export').addEventListener('click', () => {
+    exportMidi()
+})
