@@ -24,5 +24,8 @@
     "midifile": "^2.0.0",
     "tonal": "^2.0.0",
     "tone": "^0.12.80"
+  },
+  "devDependencies": {
+    "electron-packager": "^12.2.0"
   }
 }

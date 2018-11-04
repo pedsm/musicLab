@@ -1,14 +1,12 @@
 # musicLab
 Midi AI
 
-After installing node you can run the following code to install all the libraries:
+This is an electron application. However it has not been packaged yet so to run it you must perform the following steps after cloning the repository.
+
+Requirements: 
+1. Node.js(NPM)
 
 ```bash
 npm install
-```
-
-Once that is done you can run any script by using:
-
-```bash
-node src/index.js
+npm start
 ```
