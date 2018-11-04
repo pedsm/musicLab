@@ -33,6 +33,7 @@
   },
   "build": {
     "appId": "com.music-lab",
+    "asar-unpack": "**/frontend",
     "mac": {
       "category": "entertainment"
     }
