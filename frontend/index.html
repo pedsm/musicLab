@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .toggle {
+            display:grid; 
+            grid-template-columns: auto 50px;
+            padding: 10px;
+        }
+        .toggle > input {
+           width:50px; 
+           height:50px; 
+        }
+    </style>
 </head>
 
 <body>
@@ -35,20 +46,20 @@
         <section>
             <div id="patterns">
                 <h1>{{name}}</h1>
-                <div v-for="pattern in patterns">
-                    <!-- <svg width=400 height=400>
-                        <rect v-for="(note,i) in pattern"
-                        :width="note.durS * (400/8)"
-                        :height="(150/11)"
-                        :x="note.timeS * (400/8)"
-                        :y="200 - ((150/11) * note.relNote)"
-                        fill="#00d1b2"
-                        ></rect>
-                    </svg> -->
+                <div class="toggle" v-for="toggle in toggles">
+                    <p class="title">{{toggle.name}}</p>
+                    <input type="checkbox" v-model="toggle.value"/>
                 </div>
             </div>
         </section>
     </div>
+    <footer class="footer">
+            <div class="content has-text-centered">
+              <p>
+                <strong>Music Lab</strong> built in under 24h in HackTheMidlands
+              </p>
+            </div>
+          </footer>
     <script src="./main.js"></script>
     <!-- <script>
         const app = new Vue({
