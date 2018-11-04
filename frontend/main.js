@@ -86,7 +86,7 @@ function makeSequence() {
     // const model = [0, 1, -1, 2]
     const model = gotModel
     const baseNote = "G4"
-    const s = scale('dorian').map(transpose(baseNote))
+    const s = scale('major').map(transpose(baseNote))
     let cursor = 0
     const sequence = [baseNote]
     for (let i = 0; i <= 14; i++) {
@@ -150,7 +150,7 @@ function exportMidi() {
         melody.note(note.midi, note.timeS, note.durS)
     }
     for (i in chords[chordI]) {
-        const notes = Chord.notes(chords[i]).map(a => a + '3')
+        const notes = Chord.notes(chords[chordI][i]).map(a => a + '3')
         for (note of notes) {
             chordTrack.note(Note.midi(note), Tone.Time(`${i}:0`).toSeconds(), Tone.Time('1:0').toSeconds())
         }
