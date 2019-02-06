@@ -18,7 +18,7 @@ Music Lab is a melody generator based on Markov chains. If you want to see what 
 
 1. Mac:
 
-Just download the latest release from here and run it
+Just download the latest release from [here](https://github.com/pedsm/musicLab/releases) and run it
 
 2. Windows and Linux:
 
