@@ -92,7 +92,7 @@ By doing such a short and biased lookup and only considering the previous note r
 
 **The fix**
 
-The fix is less than an elegant solution, but it is a working one. The point of this project may a remind you is to generate random melodies which sound good. Not create a super complex system which will be musically smart as a human being. So the fix was dirty and simple. Instead of taking the input of `[0,2,2,2]` and reverse engineering the notes. I map the relative positions of those to a common western scale. Right now the major scale
+The fix is less than an elegant solution, but it is a working one. The point of this project may I remind you is to generate random melodies which sound good. Not create a super complex system which will be as musically smart as a human being. So the fix was dirty and simple. Instead of taking the input of `[0,2,2,2]` and reverse engineering the notes. I map the relative positions of those to a common western scale. Right now the major scale.
 
 ```javascript
 const s = scale('major').map(transpose(baseNote))
