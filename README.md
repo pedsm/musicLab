@@ -1,5 +1,6 @@
 # musicLab
-Midi AI
+
+![MusicLab](images/UIScreenshot.png)
 
 AI Music making, yes another one.
 
