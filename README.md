@@ -71,7 +71,7 @@ A `0:1` means play for a quarter of a beat meanwhile a `0:2` means play for half
 
 ## Why it works so well(at least I think it does)?
 
-There was a massive oversight by my part while developing this project which lead me to `cheat` once more to get this done in the time frame that we had. The concept of using Markov for this is theoretically correct. However, there is one key difference you may have caught if you were paying attention.
+There was a massive oversight by my part while developing this project which lead me to `cheat` once more to get this done in the time frame that we had. The concept of using Markov for this is theoretically correct. However, there is one key problem you may have caught if you were paying attention.
 
 As I said before:
 
